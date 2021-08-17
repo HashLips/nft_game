@@ -44,7 +44,7 @@ export const connect = () => {
           method: "net_version",
         });
         console.log(networkId);
-        if (networkId == 137) {
+        if (networkId == 1337) {
           const lipToken = new web3.eth.Contract(
             LipToken.abi,
             "0x247700BBab4dC984547444eCaa95f4E3Ed5dEC74"
