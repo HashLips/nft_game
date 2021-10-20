@@ -34,11 +34,11 @@ contract LipToken is ERC721, Ownable {
     return randomNum % _mod;
   }
 
-  function updateFee(uint256 _fee) external onlyOwner() {
+  function updateFee(uint256 _fee) external onlyOwner {
     fee = _fee;
   }
 
-  function withdraw() external payable onlyOwner() {
+  function withdraw() external payable onlyOwner {
     address payable _owner = payable(owner());
     _owner.transfer(address(this).balance);
   }
